@@ -1,0 +1,51 @@
+r=(10,3,9,7,6,4,1,2,5,8)
+n= ["ashmit", "ram", "daksh", "abhishek", "devansh", "himanshu", "pranshu", "pratyush", "himmat", "srikant"]
+d={}
+m=[]
+for i in range(0,10):
+    m1= print("enter marks of ", n[i], "here: ", end= " ")
+    m2= int(input(" "))
+    m.append(m2)
+    d2={}
+    d2["name"]= n[i]
+    d2["marks"]= m2
+    d[i]= d2
+print(d)
+print("menu")
+
+print("to find the topper press 1: ")
+print("to arrange roll number in ascending order press 2")
+print("to create record of students scoring less than 400 press 3")
+print("to add another record press 4")
+print("to exit press 5")
+while 2>1:
+    ch= int(input("enter your choice here: "))
+    if ch == 1:
+        c1= max(m)
+        for i in d:
+            if d[i]["marks"]==c1:
+                print(d[i]["name"], "topped this exam ")
+    elif ch==2:
+        sorted(d)
+        print(d)
+    elif ch == 3:
+        d3={}
+        for i in d:            
+            if d[i]["marks"]< 400:
+                d3[i]= d[i]
+        print(d3)
+    elif ch == 4:
+        b1=int(input("enter the board roll number: "))
+        b2= input("enter the name of the student: ")
+        print("enter narks of  ", b2, "here: ", end= "")
+        b3= int(input(""))
+        b4= {}
+        b4["names"]= b2
+        b4["marks"]= b3
+        d[b1]= b4
+        print(d)
+    else:
+        print("thankyou for playing the game :) ")
+        print("made by:- ashmit tripathi")
+        print("git:- OP-AT")
+        break
